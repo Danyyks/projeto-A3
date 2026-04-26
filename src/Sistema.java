@@ -9,6 +9,8 @@ public class Sistema {
 
         Scanner entrada = new Scanner(System.in);
 
+        System.out.println("--- FOLHA DE PAGAMENTO ---");
+
         final double SALARIO_BASE = 2000;
 
         ArrayList<String> funcionarios = new ArrayList<>();
