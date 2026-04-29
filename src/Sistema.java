@@ -7,9 +7,14 @@ import java.util.ArrayList;
 public class Sistema {
     public static void main(String[] args) {
 
+        // segue abaixo variaveis para mudar a cor do "sout" para roxo
+        // apenas pela estética visual
+        String ROXO = "\u001B[35m";
+        String RESET = "\u001B[0m";
+
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("--- FOLHA DE PAGAMENTO ---");
+        System.out.println(ROXO + "--- FOLHA DE PAGAMENTO ---" + RESET );
 
         final double SALARIO_BASE = 2000;
 
@@ -19,6 +24,7 @@ public class Sistema {
 
         int opcao = -1;
         do {
+            System.out.println("Escolha a opção desejada:");
             System.out.println("1 - Funcionário padrão");
             System.out.println("2 - Funcionário comissionado");
             System.out.println("3 - Funcionário produção");
