@@ -1,4 +1,4 @@
-import java.util.Scanner;
+﻿import java.util.Scanner;
 import java.util.ArrayList;
 
 // projeto feito de acordo com o que foi pedido
@@ -7,8 +7,7 @@ import java.util.ArrayList;
 public class Sistema {
     public static void main(String[] args) {
 
-        // segue abaixo variaveis para mudar a cor do "sout" para roxo
-        // apenas pela estética visual
+        // cores para deixar o texto do título roxo no terminal
         String ROXO = "\u001B[35m";
         String RESET = "\u001B[0m";
 
@@ -18,10 +17,12 @@ public class Sistema {
 
         final double SALARIO_BASE = 2000;
 
+        // lista para guardar os dados de todos os funcionários cadastrados
         ArrayList<String> funcionarios = new ArrayList<>();
 
         double soma;
 
+        // menu principal que fica repetindo até o usuário escolher sair
         int opcao = -1;
         do {
             System.out.println("Escolha a opção desejada:");
@@ -32,6 +33,7 @@ public class Sistema {
             System.out.println("0 - Sair");
             System.out.println("Digite a opção desejada: ");
 
+            // verifica se o usuário digitou um número válido
             if(!entrada.hasNextInt()) {
                 System.out.println("Digite um número válido!");
                 entrada.nextLine();
@@ -42,6 +44,7 @@ public class Sistema {
             entrada.nextLine();
 
             switch (opcao) {
+                // cadastra funcionário com salário fixo
                 case 1:
                     System.out.println("Insira nome do funcionário");
                     String nome1 = entrada.nextLine();
@@ -53,6 +56,7 @@ public class Sistema {
                     System.out.println(dados1);
                     break;
 
+                // cadastra funcionário com salário base + comissão sobre vendas
                 case 2:
                     System.out.println("Insira nome do funcionário");
                     String nome2 = entrada.nextLine();
@@ -80,6 +84,7 @@ public class Sistema {
                     System.out.println(dados2);
                         break;
 
+                // cadastra funcionário com salário base + valor por peça produzida
                 case 3:
                     System.out.println("Insira nome do funcionário");
                     String nome3 = entrada.nextLine();
@@ -107,6 +112,7 @@ public class Sistema {
                     System.out.println(dados3);
                     break;
 
+                // exibe a folha de pagamento com todos os funcionários cadastrados
                 case 4:
                     System.out.println("Folha de Pagamento");
 
@@ -116,16 +122,19 @@ public class Sistema {
 
                     break;
 
+                // opção para sair do sistema
                 case 0:
                     System.out.println("Encerrando sistema...");
-
                     break;
+
+                    // caso o usuário digite um número que não corresponde a nenhuma opção
                 default:
                     System.out.println("Opção inválida");
             }
 
         } while (opcao !=0);
 
+        // fecha o scanner
         entrada.close();
     }
 }
