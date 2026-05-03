@@ -1,4 +1,4 @@
-﻿import java.util.Scanner;
+import java.util.Scanner;
 import java.util.ArrayList;
 
 // projeto feito de acordo com o que foi pedido
